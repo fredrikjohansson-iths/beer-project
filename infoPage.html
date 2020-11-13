@@ -14,9 +14,6 @@
 
 <body>
     <div class="infoContainer">
-        <div class="sokResult">
-            <p>Result</p>
-        </div>
         <div class="innerContainer">
             <div id="img-container"><img id="imgBox"></div>
 
@@ -37,53 +34,50 @@
                         <div classs="infoBox3">
                             <span class="beer-basic-info">First brewed: </span>
                             <span class="beer-basic-info" id="first-brewed"></span>
-
-
                         </div>
                     </div>
                 </div>
-
-                <div class="buyContainer">
-
-                </div>
                 <div class="moreInfoBox">
                     <h3>Ingredients</h3>
-                    <h3>Hops</h3>
-                    <table>
-                        <tr>
-                            <td>
-                                Name</td>
-                            <td><span id="Ingredients"></span></td>
+                    <div class="boxIngredient">
+                        <div class="boxHops">
+                            <p class="heading-ingredient">Hops</p>
+                            <table class="tbl-ingredient">
+                                <tr>
+                                    <td class="td-fix-wodth">Name</td>
+                                    <td><span id="Ingredients"></span></td>
 
-                        </tr>
-                        <tr>
-                            <td>Amount</td>
-                            <td><span id="IngredientsAmount"></span></td>
-                        </tr>
-                        <tr>
-                            <td>Attribute</td>
-                            <td><span id="IngredientsAttribute"></span></td>
-                        </tr>
-                    </table>
+                                </tr>
+                                <tr>
+                                    <td class="td-fix-wodth">Amount</td>
+                                    <td><span id="IngredientsAmount"></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-fix-wodth">Attribute</td>
+                                    <td><span id="IngredientsAttribute"></span></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="boxMalt">
+                            <p class="heading-ingredient">Malt</p>
+                            <table>
+                                <tr>
+                                    <td class="td-fix-wodth">
+                                        Name</td>
+                                    <td><span id="Malt"></span></td>
+
+                                </tr>
+                                <tr>
+                                    <td class="td-fix-wodth">Amount</td>
+                                    <td><span id="MaltAmount"></span></td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
 
 
                     <div class="omDrycken">
-
-                        <h3>Malt</h3>
-                        <table>
-                            <tr>
-                                <td>
-                                    Name</td>
-                                <td><span id="Malt"></span></td>
-
-                            </tr>
-                            <tr>
-                                <td>Amount</td>
-                                <td><span id="MaltAmount"></span></td>
-                            </tr>
-
-                        </table>
-
                         <div class="övrigt">
                             <h3>FOOD PAIRING</h3>
                             <p id="foodPairing">
@@ -93,9 +87,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                
+
             </div>
         </div>
 

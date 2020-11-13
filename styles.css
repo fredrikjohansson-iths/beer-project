@@ -35,16 +35,12 @@ a:hover {
 
 #randomLabel {
     max-height: 500px;
-
 }
 
 .infoContainer {
     width: 100%;
-    padding-right: 12px;
-    padding-left: 12px;
     margin-right: auto;
     margin-left: auto;
-
 }
 
 .sokResult {
@@ -63,7 +59,7 @@ a:hover {
 #imgBox {
     height: auto;
     width: 70%;
-    padding: 50px;
+    padding: 15px 50px;
 }
 
 .nameBox {
@@ -72,6 +68,8 @@ a:hover {
 
 .infoBox {
     background-color: #cfad99;
+    padding: 20px;
+    margin-top: 20px;
 }
 
 .buyContainer {
@@ -91,14 +89,32 @@ a:hover {
     justify-content: space-between;
 }
 
-.moreInfoBox {
+.boxIngredient {
     display: flex;
-    flex-direction: column;
+    flex-flow: row;
 }
 
 .beer-basic-info {
     font-size: 16px;
     font-weight: bold;
+}
+
+.tbl-ingredient {
+    table-layout: auto;
+}
+
+.boxMalt {
+    margin-left: 50px;
+}
+
+.td-fix-wodth {
+    width: 100px;
+}
+
+.heading-ingredient {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0.5em 0;
 }
 
 #results {
