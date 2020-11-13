@@ -1,5 +1,6 @@
 body{
     background-color: #5f7264;
+    font-family: 'Courier New', Courier, monospace;
 }
 html {
     height: 100%;
@@ -84,4 +85,7 @@ html {
 .beer-basic-info {
     font-size: 16px;
     font-weight: bold;
+}
+#results{
+    list-style: none;
 }
