@@ -1,10 +1,15 @@
-body{
+body {
     background-color: #5f7264;
     font-family: 'Courier New', Courier, monospace;
 }
+
 html {
     height: 100%;
     margin: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 .hide {
@@ -31,7 +36,7 @@ html {
     padding-left: 12px;
     margin-right: auto;
     margin-left: auto;
-    
+
 }
 
 .sokResult {
@@ -87,7 +92,12 @@ html {
     font-size: 16px;
     font-weight: bold;
 }
-#results{
+
+#results {
     list-style: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ul {
+    height: 245px;
 }

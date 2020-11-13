@@ -1,47 +1,48 @@
 const form = document.getElementById('form');
-form.addEventListener('submit', searchName);
 const ul = document.getElementById('results')
 const div = document.getElementById('resultsArea')
+const pageNav = document.getElementById('pageNav')
+const next = document.getElementById('next')
+const previous = document.getElementById('previous')
+
+next.addEventListener('onclick', nextPage);
+previous.addEventListener('onclick', previousPage);
+form.addEventListener('submit', searchName);
+
+var currentPage = 1;
+
+async function nextPage() {
+
+    currentPage++
+    searchName(event)
+
+}
+
+function previousPage() {
+
+    currentPage--
+    searchName(event)
+}
+
 
 async function searchName(event) {
     event.preventDefault();
 
+    var maxPage = `&page=${currentPage}&per_page=10`
+
     var textInput = document.getElementById('textInput').value
 
-    var inputURL = "https://api.punkapi.com/v2/beers?beer_name=" + textInput
-
-    // const newArr = []
+    var inputURL = "https://api.punkapi.com/v2/beers?beer_name=" + textInput + maxPage
 
     ul.innerHTML = ""
+
+    pageNav.classList.remove('hide')
 
     axios
         .get(inputURL)
         .then(function (response) {
 
             const json = response.data;
-
-            // if (json.length > 10) {
-
-            //     for (const i of json) {
-            //         newArr.push(i.name);
-            //     }
-
-            //     var end = newArr.length;
-
-            //     var pg1 = newArr.slice(0, 10);
-
-            //     var pg2 = newArr.slice(10, 20);
-
-            //     var pg3 = newArr.slice(20, end);
-
-            //     var pages = {
-            //         "Page1": pg1,
-            //         "Page2": pg2,
-            //         "Page3": pg3,
-            //     };
-
-            // }
-
 
             const brewNames = json.sort((a, b) => {
                 if (a.name > b.name) {
@@ -72,13 +73,12 @@ async function searchName(event) {
 
                 ul.appendChild(li)
 
-                // const nameElement = document.createElement('li')
-
                 link.setAttribute('href', beerURL)
 
 
             }
 
+            
 
         })
         .catch(function (error) {
