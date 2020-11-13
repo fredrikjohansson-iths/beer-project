@@ -17,8 +17,12 @@ async function getBeerInfo(beerId) {
                 const beerDiscription = document.getElementById('beer-discription');
                 const ingridents = document.getElementById('Ingredients');
                 const ingAmount = document.getElementById('IngredientsAmount');
+                const ingAttribute = document.getElementById('IngredientsAttribute');
+                const Malt = document.getElementById('Malt');
+                const MaltAmount = document.getElementById('MaltAmount');
                 const foodPairing = document.getElementById('foodPairing');
                 const brewerTips = document.getElementById('brewersTips');
+
 
                 beerName.innerText = i.name
                 beerPercentage.innerText = i.ph
@@ -29,13 +33,28 @@ async function getBeerInfo(beerId) {
                 brewerTips.innerText = i.brewers_tips
 
 
-
+                // Hops ingredent
                 const beerIngridents = i.ingredients.hops[0]
                 const beerIngridentsName = beerIngridents.name
                 const beerIngridentsAmount = beerIngridents.amount.value
+                const beerIngridentsAttribute = beerIngridents.attribute
+
 
                 ingridents.innerText = beerIngridentsName
                 ingAmount.innerText = beerIngridentsAmount
+                ingAttribute.innerText = beerIngridentsAttribute
+
+                // Malts ingedents
+                const BeerMalt = i.ingredients.malt[0]
+                const beerMaltName = BeerMalt.name
+                const beermaltAmount = BeerMalt.amount.value
+
+                Malt.innerText = beerMaltName
+                MaltAmount.innerText = beermaltAmount
+
+
+
+
 
 
             }
