@@ -3,6 +3,12 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.flex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 html {
     height: 100%;
     margin: 0;
@@ -22,18 +28,14 @@ a:hover {
     display: none;
 }
 
-.contents {
-    display: contents;
-}
-
 #randomName {
     /* height: 500px; */
     width: 400px;
 }
 
 #randomLabel {
-    height: 60%;
-    width: auto;
+    max-height: 500px;
+
 }
 
 .infoContainer {
@@ -108,13 +110,22 @@ ul {
     height: 245px;
 }
 
-button {
+.button {
     border: none;
     border-radius: 2px;
     transition-duration: 0.4s;
 }
 
-button:hover {
+.button:hover {
     background-color: #1f1f1f;
     color: #d6d6d6;
+}
+
+.button-img {
+    background-color: transparent;
+    border-style: none;
+}
+
+.center {
+    margin-left: 40vw;
 }
