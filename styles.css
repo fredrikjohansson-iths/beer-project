@@ -24,6 +24,12 @@ a:hover {
     color: cornflowerblue;
 }
 
+i,
+#submit {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
 .hide {
     display: none;
 }
@@ -36,6 +42,10 @@ a:hover {
 #randomLabel {
     max-height: 500px;
 
+}
+
+#next {
+    margin-left: 8vw;
 }
 
 .infoContainer {
