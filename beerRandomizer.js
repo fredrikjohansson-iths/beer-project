@@ -12,7 +12,7 @@ async function getRandom() {
 
                 const imageURL = i.image_url ?? './placeholder.png'
                 const beerId = i.id
-                const beerURL = './infoPage.html?beerId='+beerId
+                const beerURL = './infoPage.html?beerId=' + beerId
 
                 const nameElement = document.createElement('p')
                 const nameNode = document.createTextNode(`${i.name}`)

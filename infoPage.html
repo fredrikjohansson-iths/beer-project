@@ -18,7 +18,8 @@
             <p>Result</p>
         </div>
         <div class="innerContainer">
-            <img id="imgBox">
+            <div id="img-container"><img id="imgBox"></div>
+
             <div class="nameBox">
                 <div class="infoBox">
                     <h2 id="beer-name"></h2>
@@ -47,12 +48,42 @@
                 </div>
                 <div class="moreInfoBox">
                     <h3>Ingredients</h3>
-                    <div id="Ingredients"></div>
-                    <p id="IngredientsAmount"></p>
+                    <h3>Hops</h3>
+                    <table>
+                        <tr>
+                            <td>
+                                Name</td>
+                            <td><span id="Ingredients"></span></td>
+
+                        </tr>
+                        <tr>
+                            <td>Amount</td>
+                            <td><span id="IngredientsAmount"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Attribute</td>
+                            <td><span id="IngredientsAttribute"></span></td>
+                        </tr>
+                    </table>
+
+
                     <div class="omDrycken">
-                        <h3>Hops </h3>
+
                         <h3>Malt</h3>
-                        <p>Bryggeriet ligger i Petaluma, i Kalifornien, och grundades 1993 <br>av Tony Magee. Namnet Lagunitas kommer av orten där<br> bryggeriet ursprungligen låg en kort tid, innan det flyttade<br> till Petaluma.</p>
+                        <table>
+                            <tr>
+                                <td>
+                                    Name</td>
+                                <td><span id="Malt"></span></td>
+
+                            </tr>
+                            <tr>
+                                <td>Amount</td>
+                                <td><span id="MaltAmount"></span></td>
+                            </tr>
+
+                        </table>
+
                         <div class="övrigt">
                             <h3>FOOD PAIRING</h3>
                             <p id="foodPairing">
@@ -62,6 +93,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div>
+                
             </div>
         </div>
 

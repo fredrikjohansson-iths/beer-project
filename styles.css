@@ -1,4 +1,6 @@
-body,
+body{
+    background-color: #5f7264;
+}
 html {
     height: 100%;
     margin: 0;
@@ -40,17 +42,17 @@ html {
 
 .innerContainer {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
-.imgBox {
-    /*height: 300px;
-    width: 500px;*/
+#imgBox {
+    height: auto;
+    width: 70%;
+    padding: 50px;
 }
 
 .nameBox {
-    background-color: #f4efe8;
+    padding-left: 50px;
 }
 
 .infoBox {
