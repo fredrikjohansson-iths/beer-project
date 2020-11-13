@@ -1,5 +1,7 @@
 const form = document.getElementById('form');
 form.addEventListener('submit', searchName);
+const ul = document.getElementById('results')
+const div = document.getElementById('resultsArea')
 
 async function searchName(event) {
     event.preventDefault();
@@ -8,9 +10,7 @@ async function searchName(event) {
 
     var inputURL = "https://api.punkapi.com/v2/beers?beer_name=" + textInput
 
-    const div = document.getElementById('resultsArea')
-    const ul = document.getElementById('results')
-    const li = document.createElement("li");
+    // const newArr = []
 
     ul.innerHTML = ""
 
@@ -20,27 +20,27 @@ async function searchName(event) {
 
             const json = response.data;
 
-            if (json.length > 10) {
+            // if (json.length > 10) {
 
-                for (const i of data) {
-                    newArr.push(i.name);
-                  }
-          
-                  var end = newArr.length;
-          
-                  var pg1 = newArr.slice(0, 10);
-          
-                  var pg2 = newArr.slice(10, 20);
-          
-                  var pg3 = newArr.slice(20, end);
-          
-                  var pages = {
-                    "Page1": pg1,
-                    "Page2": pg2,
-                    "Page3": pg3,
-                  };
+            //     for (const i of json) {
+            //         newArr.push(i.name);
+            //     }
 
-            }
+            //     var end = newArr.length;
+
+            //     var pg1 = newArr.slice(0, 10);
+
+            //     var pg2 = newArr.slice(10, 20);
+
+            //     var pg3 = newArr.slice(20, end);
+
+            //     var pages = {
+            //         "Page1": pg1,
+            //         "Page2": pg2,
+            //         "Page3": pg3,
+            //     };
+
+            // }
 
 
             const brewNames = json.sort((a, b) => {
@@ -58,16 +58,27 @@ async function searchName(event) {
 
             for (const i of brewNames) {
 
-                const nameElement = document.createElement('li')
-                const name = document.createTextNode(`${i.name}`);
+                const beerURL = './infoPage.html?beerId=' + i.id
 
-                nameElement.appendChild(name)
+                const li = document.createElement("li");
 
-                li.appendChild(nameElement)
+                const link = document.createElement('a')
+
+                const textNode = document.createTextNode(i.name)
+
+                link.appendChild(textNode)
+
+                li.appendChild(link)
+
+                ul.appendChild(li)
+
+                // const nameElement = document.createElement('li')
+
+                link.setAttribute('href', beerURL)
 
 
             }
-            ul.appendChild(li)
+
 
         })
         .catch(function (error) {
