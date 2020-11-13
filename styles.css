@@ -31,6 +31,7 @@ html {
     padding-left: 12px;
     margin-right: auto;
     margin-left: auto;
+    
 }
 
 .sokResult {
@@ -88,4 +89,5 @@ html {
 }
 #results{
     list-style: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
